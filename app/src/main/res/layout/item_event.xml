@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    app:cardCornerRadius="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvTrails"
+            android:layout_width="128dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:background="#E5EAF9"
+            android:drawableStart="@drawable/tool_trails"
+            android:padding="8dp"
+            android:text="Trials"
+            android:textAlignment="center"
+            android:textColor="@drawable/text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSetRemainder"
+            android:layout_width="128dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:drawableStart="@drawable/tool_remainder"
+            android:padding="8dp"
+            android:text="Set Remainder"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTrails"
+            app:layout_constraintStart_toEndOf="@+id/tvTrails"
+            app:layout_constraintTop_toTopOf="@+id/tvTrails" />
+
+        <TextView
+            android:id="@+id/tvVenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="Venue "
+            app:layout_constraintBottom_toTopOf="@+id/tvLocation"
+            app:layout_constraintEnd_toStartOf="@+id/view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTrails" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="Old Trafford,  Manchester"
+            app:layout_constraintEnd_toEndOf="@+id/tvVenue"
+            app:layout_constraintStart_toStartOf="@+id/tvVenue"
+            app:layout_constraintTop_toBottomOf="@+id/tvVenue" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:background="@color/black1"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvVenue"
+            app:srcCompat="@drawable/blue_bg" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="Sat, 12 Nov,      8:30 PM"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLocation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view"
+            app:layout_constraintTop_toTopOf="@+id/tvVenue" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

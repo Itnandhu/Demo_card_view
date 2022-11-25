@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvTrails"
+            android:layout_width="128dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/tool_trail_group"
+            android:padding="8dp"
+            android:text="Trials"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSetRemainder"
+            android:layout_width="128dp"
+            android:layout_height="34dp"
+            android:layout_weight="1"
+            android:background="@drawable/tool_bg_remainder"
+            android:drawableStart="@drawable/tool_remainder_group"
+            android:padding="8dp"
+            android:text="Set Remainder"
+            android:textAlignment="center"
+            android:textColor="#006DD3"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTrails"
+            app:layout_constraintStart_toEndOf="@+id/tvTrails"
+            app:layout_constraintTop_toTopOf="@+id/tvTrails" />
+
+        <TextView
+            android:id="@+id/tvVenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center"
+            android:text="Venue "
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/tvLocation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTrails" />
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Old Trafford, Manchester, England."
+            app:layout_constraintStart_toStartOf="@+id/tvVenue"
+            app:layout_constraintTop_toBottomOf="@+id/tvVenue" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@color/black1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocation"
+            app:srcCompat="@drawable/blue_bg" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableStart="@drawable/tool_calendar"
+            android:gravity="center"
+            android:text="Sat, 12 Nov"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/tool_time"
+            android:gravity="center"
+            android:text="Sat, 12 Nov"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvDate"
+            app:layout_constraintTop_toTopOf="@id/tvDate" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
